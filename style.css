@@ -25,3 +25,111 @@ color: #000000; /* Gris oscuro para el texto */
 background-color: #f5f5f5; /* Fondo gris claro */
 
 }
+
+/* ===== HEADER ===== */
+
+header {
+
+background-color: #1565C0; /* Azul primario */
+
+color: white;
+
+text-align: center;
+
+padding: 2rem; /* Espacio interno */
+
+}
+
+/* ===== NAV ===== */
+
+nav {
+
+background-color: #0D47A1; /* Azul oscuro */
+
+padding: 1rem;
+
+text-align: center;
+
+}
+
+nav a {
+
+color: white;
+
+text-decoration: none; /* Sin subrayado */
+
+margin: 0 1rem; /* Espacio entre links */
+
+font-weight: bold;
+
+}
+
+nav a:hover {
+
+text-decoration: underline; /* Subrayado al pasar el mouse */
+
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+
+background-color: #333;
+
+color: white;
+
+text-align: center;
+
+padding: 1rem;
+
+}
+
+/* ===== MAIN ===== */
+
+main {
+
+max-width: 900px; /* Ancho maximo */
+
+margin: 0 auto; /* Centrar horizontalmente */
+
+padding: 2rem;
+
+}
+
+/* ===== SECCIONES ===== */
+
+section {
+
+background-color: white;
+
+border-radius: 8px; /* Esquinas redondeadas */
+
+padding: 2rem;
+
+margin-bottom: 2rem;
+
+box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+
+}
+
+/* ===== IMAGENES ===== */
+
+img {
+
+max-width: 100%; /* Nunca mas ancho que su contenedor */
+
+height: auto; /* Mantiene proporcion */
+
+border-radius: 8px;
+
+}
+
+/* ===== LISTAS ===== */
+
+ul, ol {
+
+padding-left: 2rem; /* Indentacion de la lista */
+
+margin-bottom: 1rem;
+
+}
