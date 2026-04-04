@@ -1,135 +1,132 @@
-/* ===== RESET BASICO ===== */
-
+/* ===== RESET BASICO (Tu código) ===== */
 * {
-
-margin: 0; /* Elimina margenes por defecto */
-
-padding: 0; /* Elimina relleno por defecto */
-
-box-sizing: border-box; /* Los bordes se incluyen en el ancho */
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ===== TIPOGRAFIA BASE ===== */
-
+/* ===== TIPOGRAFIA Y FONDO (Tu código) ===== */
 body {
-
-font-family: 'Segoe UI', Arial, sans-serif;
-
-font-size: 20px; /* Tamanio base */
-
-line-height: 2; /* Espacio entre lineas */
-
-color: #302c2c; /* Gris oscuro para el texto */
-
-background-color: #9ac791; /* Fondo verde claro */
-
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 2;
+    color: #302c2c;
+    background-color: #9ac791; /* Fondo verde claro */
 }
 
-/* ===== HEADER ===== */
-
+/* ===== HEADER (Tu código) ===== */
 header {
-
-background-color: #1565C0; /* Azul primario */
-
-color: white;
-
-text-align: center;
-
-padding: 2rem; /* Espacio interno */
-
+    background-color: #1565C0;
+    color: white;
+    text-align: center;
+    padding: 2rem;
 }
 
-/* ===== NAV ===== */
-
+/* ===== NAV (Tu código) ===== */
 nav {
-
-background-color: #0D47A1; /* Azul oscuro */
-
-padding: 1rem;
-
-text-align: center;
-
+    background-color: #0D47A1;
+    padding: 1rem;
+    text-align: center;
 }
 
 nav a {
-
-color: white;
-
-text-decoration: none; /* Sin subrayado */
-
-margin: 0 1rem; /* Espacio entre links */
-
-font-weight: bold;
-
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
 }
 
 nav a:hover {
-
-text-decoration: underline; /* Subrayado al pasar el mouse */
-
+    text-decoration: underline;
 }
 
-/* ===== FOOTER ===== */
-
-footer {
-
-background-color: #333;
-
-color: white;
-
-text-align: center;
-
-padding: 1rem;
-
-}
-
-/* ===== MAIN ===== */
-
+/* ===== MAIN Y SECCIONES (Tu código) ===== */
 main {
-
-max-width: 900px; /* Ancho maximo */
-
-margin: 0 auto; /* Centrar horizontalmente */
-
-padding: 2rem;
-
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
 }
-
-/* ===== SECCIONES ===== */
 
 section {
-
-background-color: white;
-
-border-radius: 8px; /* Esquinas redondeadas */
-
-padding: 2rem;
-
-margin-bottom: 2rem;
-
-box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
-
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* ===== IMAGENES ===== */
+/* ===== FORMULARIOS (Requisitos del TP)  ===== */
+form div {
+    margin-bottom: 1.5rem;
+    line-height: 1.2; /* Ajuste para que los labels no estén tan separados */
+}
+
+label {
+    display: block; /* Labels arriba de los inputs  */
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%; /* Inputs al 100% de ancho  */
+    padding: 0.8rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+/* (c) Focus: Borde azul y sombra sutil  */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #1565C0;
+    box-shadow: 0 0 5px rgba(21, 101, 192, 0.5);
+}
+
+/* (a) Valid: Borde verde y fondo claro  */
+input:valid, textarea:valid {
+    border-color: #2e7d32;
+    background-color: #f1f8e9;
+}
+
+/* (b) Invalid: Borde rojo (solo si no está vacío)  */
+input:invalid:not(:placeholder-shown) {
+    border-color: #d32f2f;
+    background-color: #ffebee;
+}
+
+/* Botón de envío */
+button {
+    background-color: #1565C0;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #0D47A1;
+}
+
+/* ===== FOOTER, IMAGENES Y LISTAS (Tu código) ===== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
 
 img {
-
-max-width: 100%; /* Nunca mas ancho que su contenedor */
-
-height: auto; /* Mantiene proporcion */
-
-border-radius: 8px;
-
+    max-width: 25%;
+    height: auto;
+    border-radius: 5px;
 }
 
-/* ===== LISTAS ===== */
-
 ul, ol {
-
-padding-left: 2rem; /* Indentacion de la lista */
-
-margin-bottom: 1rem;
-
+    padding-left: 2rem;
+    margin-bottom: 1rem;
 }
