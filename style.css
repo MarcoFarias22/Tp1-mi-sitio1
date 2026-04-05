@@ -9,12 +9,12 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     font-size: 20px;
-    line-height: 2;
+    line-height: 1.6; /* Ajustado de 2 a 1.6 para mejor lectura */
     color: #302c2c;
     background-color: #9ac791; /* Fondo verde claro */
 }
 
-/* ===== HEADER (Tu código) ===== */
+/* ===== HEADER Y NAV (Tu código) ===== */
 header {
     background-color: #1565C0;
     color: white;
@@ -22,7 +22,6 @@ header {
     padding: 2rem;
 }
 
-/* ===== NAV (Tu código) ===== */
 nav {
     background-color: #0D47A1;
     padding: 1rem;
@@ -40,47 +39,56 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* ===== MAIN Y SECCIONES (Tu código) ===== */
+/* ===== MAIN Y SECCIONES (Tu código + Ajuste de ancho) ===== */
 main {
-    max-width: 900px;
+    max-width: 850px; /* Ajustado para que el formulario no sea infinito */
     margin: 0 auto;
     padding: 2rem;
 }
 
 section {
     background-color: white;
-    border-radius: 8px;
+    border-radius: 12px; /* Un poco más redondeado para estilo moderno */
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra más suave */
 }
 
-/* ===== FORMULARIOS (Requisitos del TP)  ===== */
+/* ===== IMÁGENES (Accesibilidad) [cite: 19] ===== */
+img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+/* ===== FORMULARIOS (Consigna 2)  ===== */
 form div {
     margin-bottom: 1.5rem;
-    line-height: 1.2; /* Ajuste para que los labels no estén tan separados */
+    line-height: 1.2;
 }
 
 label {
-    display: block; /* Labels arriba de los inputs  */
+    display: block; /* Labels arriba de los inputs */
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
 input, textarea, select {
-    width: 100%; /* Inputs al 100% de ancho  */
+    width: 100%; /* Inputs al 100% de ancho */
     padding: 0.8rem;
     border: 2px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease; /* Transición suave para los cambios de color */
 }
 
 /* (c) Focus: Borde azul y sombra sutil  */
 input:focus, textarea:focus, select:focus {
     outline: none;
     border-color: #1565C0;
-    box-shadow: 0 0 5px rgba(21, 101, 192, 0.5);
+    box-shadow: 0 0 8px rgba(21, 101, 192, 0.4);
 }
 
 /* (a) Valid: Borde verde y fondo claro  */
@@ -89,7 +97,7 @@ input:valid, textarea:valid {
     background-color: #f1f8e9;
 }
 
-/* (b) Invalid: Borde rojo (solo si no está vacío)  */
+/* (b) Invalid: Borde rojo (solo si se empezó a escribir)  */
 input:invalid:not(:placeholder-shown) {
     border-color: #d32f2f;
     background-color: #ffebee;
@@ -106,24 +114,19 @@ button {
     width: 100%;
     font-weight: bold;
     font-size: 18px;
+    transition: background 0.3s;
 }
 
 button:hover {
     background-color: #0D47A1;
 }
 
-/* ===== FOOTER, IMAGENES Y LISTAS (Tu código) ===== */
+/* ===== FOOTER Y LISTAS (Tu código) ===== */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
-}
-
-img {
-    max-width: 25%;
-    height: auto;
-    border-radius: 5px;
 }
 
 ul, ol {
