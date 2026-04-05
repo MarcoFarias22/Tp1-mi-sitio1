@@ -1,38 +1,67 @@
-<form action="#">
-    <div>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" minlength="3" placeholder="Tu nombre..." required [cite: 10, 11]>
-    </div>
+<!DOCTYPE html>
+<html lang="es"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Farfan Arias Marco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi sitio web</h1>
+    </header>
 
-    <div>
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required [cite: 10, 11]>
-    </div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="contact.html">Contacto</a>
+    </nav>
 
-    <div>
-        <label for="phone">Teléfono:</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10 dígitos" required [cite: 10, 11]>
-    </div>
+    <main>
+        
+        <section id="contacto">
+            <h2>¡Escríbeme!</h2>
+            <form action="#">
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" minlength="3" placeholder="Tu nombre..." required>
+                </div>
 
-    <div>
-        <label for="motivo">Motivo de contacto:</label>
-        <select id="motivo" name="motivo" required [cite: 10, 11]>
-            <option value="">Seleccione una opción</option>
-            <option value="consulta">Consulta general</option>
-            <option value="soporte">Soporte técnico</option>
-            <option value="presupuesto">Presupuesto</option>
-        </select>
-    </div>
+                <div>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
 
-    <div>
-        <label for="message">Mensaje (mín. 10 caracteres):</label>
-        <textarea id="message" name="message" minlength="10" rows="4" placeholder="Escribe aquí tu consulta..." required [cite: 10, 11]></textarea>
-    </div>
+                <div>
+                    <label for="phone">Teléfono (10 dígitos):</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Ej: 3871234567" required>
+                </div>
 
-    <div>
-        <input type="checkbox" id="terms" name="terms" required [cite: 10, 11]>
-        <label for="terms">Acepto los términos y condiciones</label>
-    </div>
+                <div>
+                    <label for="motivo">Motivo de contacto:</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="consulta">Consulta general</option>
+                        <option value="soporte">Soporte técnico</option>
+                        <option value="presupuesto">Presupuesto</option>
+                    </select>
+                </div>
 
-    <button type="submit">Enviar Mensaje</button>
-</form>
+                <div>
+                    <label for="message">Mensaje (mín. 10 caracteres):</label>
+                    <textarea id="message" name="message" minlength="10" rows="4" placeholder="Escribe aquí tu consulta..." required></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Acepto los términos y condiciones</label>
+                </div>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Farfan Arias Marco</p>
+    </footer>
+</body>
+</html>
