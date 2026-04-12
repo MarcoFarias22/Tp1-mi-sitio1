@@ -1,135 +1,255 @@
-/* ===== RESET BASICO (Tu código) ===== */
+/* =========================================
+   1. VARIABLES Y TIPOGRAFÍA 
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --color-primary: #2E75B6;
+    --color-secondary: #1B2A4A;
+    --color-accent: #F59E0B;
+    --color-text: #334155;
+    --color-bg: #F8FAFC;
+    --radius: 8px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --font-main: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================================
+   2. RESET Y ESTILOS BASE 
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== TIPOGRAFIA Y FONDO (Tu código) ===== */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 20px;
-    line-height: 1.6; /* Ajustado de 2 a 1.6 para mejor lectura */
-    color: #302c2c;
-    background-color: #9ac791; /* Fondo verde claro */
+    font-family: var(--font-main);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
 }
 
-/* ===== HEADER Y NAV (Tu código) ===== */
-header {
-    background-color: #1565C0;
+h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+h2 { font-size: 1.8rem; margin-bottom: 0.8rem; }
+h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+p { font-size: 1rem; margin-bottom: 1rem; }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   3. LAYOUT GENERAL (Grid Areas)
+   ========================================= */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+    min-height: 100vh;
+}
+
+header { grid-area: header; }
+.sidebar { grid-area: sidebar; padding: 2rem; background-color: white; border-bottom: 1px solid #eee; }
+main { grid-area: main; padding: 1.5rem; }
+
+footer { 
+    grid-area: footer; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    background-color: var(--color-secondary);
     color: white;
-    text-align: center;
-    padding: 2rem;
+    text-align: center; 
+    padding: 1rem; 
 }
 
-nav {
-    background-color: #0D47A1;
-    padding: 1rem;
-    text-align: center;
+/* =========================================
+   4. COMPONENTES (Navbar y Hero)
+   ========================================= */
+header {
+    background-color: var(--color-secondary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+nav { display: flex; gap: 1.5rem; }
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 1rem;
     font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
 }
+nav a:hover { color: var(--color-accent); }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ===== MAIN Y SECCIONES (Tu código + Ajuste de ancho) ===== */
-main {
-    max-width: 850px; /* Ajustado para que el formulario no sea infinito */
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-section {
-    background-color: white;
-    border-radius: 12px; /* Un poco más redondeado para estilo moderno */
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra más suave */
-}
-
-/* ===== IMÁGENES (Accesibilidad) [cite: 19] ===== */
-img {
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin: 1rem 0;
-    border-radius: 10px;
-}
-
-/* ===== FORMULARIOS (Consigna 2)  ===== */
-form div {
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-label {
-    display: block; /* Labels arriba de los inputs */
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-input, textarea, select {
-    width: 100%; /* Inputs al 100% de ancho */
-    padding: 0.8rem;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: all 0.3s ease; /* Transición suave para los cambios de color */
-}
-
-/* (c) Focus: Borde azul y sombra sutil  */
-input:focus, textarea:focus, select:focus {
-    outline: none;
-    border-color: #1565C0;
-    box-shadow: 0 0 8px rgba(21, 101, 192, 0.4);
-}
-
-/* (a) Valid: Borde verde y fondo claro  */
-input:valid, textarea:valid {
-    border-color: #2e7d32;
-    background-color: #f1f8e9;
-}
-
-/* (b) Invalid: Borde rojo (solo si se empezó a escribir)  */
-input:invalid:not(:placeholder-shown) {
-    border-color: #d32f2f;
-    background-color: #ffebee;
-}
-
-/* Botón de envío */
-button {
-    background-color: #1565C0;
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-    font-size: 18px;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background-color: #0D47A1;
-}
-
-/* ===== FOOTER Y LISTAS (Tu código) ===== */
-footer {
-    background-color: #333;
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
 }
 
-ul, ol {
-    padding-left: 2rem;
-    margin-bottom: 1rem;
+.btn-cta {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+.btn-cta:hover { transform: scale(1.05); }
+
+/* =========================================
+   5. GALERÍA Y CONTENEDORES
+   ========================================= */
+.proyectos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.proyecto-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover { transform: translateY(-5px); }
+
+#sobre-mi, #intereses, #contacto {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-image {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: var(--shadow);
+}
+
+/* =========================================
+   6. ESTILOS DEL FORMULARIO (Recuperados)
+   ========================================= */
+form div { margin-bottom: 1rem; }
+label { display: block; font-weight: bold; margin-bottom: 0.5rem; }
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--radius);
+    font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.2);
+}
+
+button[type="submit"] {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #d97706;
+    transform: translateY(-2px);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.checkbox-group input { width: auto; }
+
+/* =========================================
+   7. RESPONSIVE - 3 Breakpoints
+   ========================================= */
+
+/* Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+    .layout {
+        grid-template-columns: 240px 1fr;
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+    }
+
+    .sidebar {
+        border-right: 1px solid #eee;
+        border-bottom: none;
+    }
+
+    .about-container {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    button[type="submit"] { width: auto; }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+    main { padding: 3rem; }
+    .hero { min-height: 50vh; }
+}
+
+/* Monitores Grandes (min-width: 1400px) */
+@media (min-width: 1400px) {
+    .layout {
+        max-width: 1600px;
+        margin: 0 auto;
+        box-shadow: var(--shadow);
+    }
 }
