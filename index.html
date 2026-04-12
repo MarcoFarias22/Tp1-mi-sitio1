@@ -1,58 +1,97 @@
 <!DOCTYPE html>
-<html lang="es"> <head>
+<html lang="es">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto - TP2</title>
+    <title>Farfan Arias Marco | Portafolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Farfan Arias Marco</h1>
+    <div class="layout">
+        
+        <header>
+            <div class="logo">
+                <h1>Marco Farfan Arias</h1>
+                <p>Estudiante de Programación en Salta, Argentina.</p>
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="#sobre-mi">Acerca de</a> 
+                <a href="contact.html">Contacto</a>
+            </nav>
+        </header>
 
-<p>Estudiante de Programacion — Salta, Argentina</p>
-
-    </header>
-
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="#sobre-mi">Acerca de</a> 
-        <a href="contact.html">Contacto</a>
-    </nav>
-
-    <main> <section>
-            <h2>Bienvenida</h2>
-            <p>Esta es mi primera página web.</p>
-            <p>Espero que sea de tu agrado.</p>
-            <img src="Gato.jpg" alt="Foto de perfil del estudiante"> 
-        </section>
-
-        <section id="sobre-mi">
-            <h2>Acerca de mí</h2>
-            <p>Soy estudiante de Analisis de Sistemas. </p>
-<p> Tengo 23 años y me gusta programar. </p>
-<p> Estudio en la escuela normal de maestras General Manuel Belgrano.</p>
-<p> me gusta aprender cosas nuevas y compartir mis conocimientos con los demás.</p>
-<p> En mi tiempo libre me gusta jugar videojuegos, leer libros de ciencia ficción y salir con mis amigos.</p>
-<p> Espero poder convertirme en un gran programador y trabajar en proyectos interesantes en el futuro.</p>
-<p> Un gusto conocerte y gracias por visitar mi sitio web.</p>
-
-            <img src="Foto.jpg" alt="Foto de perfil del estudiante">
-        </section>
-
-        <section id="intereses">
-            <h3>Mis Intereses</h3>
+        <aside class="sidebar">
+            <h3>Navegación</h3>
             <ul>
-                    <li>Programación</li>
-    <li>Inteligencia Artificial</li>
-    <li>Desarrollo Web</li>
-    <li>Desarrollo de Aplicaciones Móviles</li>
-    <li>Cultura Japonesa y Manga</li>
-    <li>Videojuegos</li>
-
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#intereses">Intereses</a></li>
             </ul>
-        </section>
-    </main> <footer>
-        <p>&copy; 2026 - Farfan Arias Marco</p>
-    </footer>
+        </aside>
+
+        <main>
+            <section class="hero">
+                <h2>Bienvenidos/as</h2>
+            <p>Esta es mi página web.</p>
+            <p>Espero que sea de tu agrado para aprender más sobre mí. Y sobre mi trabajo.</p>
+                <img src="Gato.jpg" alt="Foto de perfil del estudiante" style="width: 120px; border-radius: 50%; margin: 10px 0;"> 
+                <a href="contact.html" class="btn-cta">¡Trabajemos juntos!</a>
+            </section>
+
+            <section id="sobre-mi">
+                <h2>Acerca de mí</h2>
+                <div class="about-container">
+                    <div class="about-text">
+                         <p>Soy estudiante de Análisis de Sistemas. Tengo 23 años y me gusta programar.</p>
+                         <p>Estudio en la Escuela Normal de Maestras General Manuel Belgrano.</p>
+                         <p>Me gusta aprender cosas nuevas y compartir mis conocimientos con los demás.</p>
+                         <p>En mi tiempo libre me gusta jugar videojuegos, leer libros de ciencia ficción y salir con mis amigos.</p>
+                         <p>Espero poder convertirme en un gran programador y trabajar en proyectos interesantes en el futuro.</p>
+                         <p>Un gusto conocerte y gracias por visitar mi sitio web.</p>
+                    </div>
+                    <img src="Foto.jpg" alt="Foto de perfil de Marco Farfan" class="about-image">
+                </div>
+            </section>
+
+            <section id="intereses">
+                <h3>Mis Intereses</h3>
+                <ul>
+                    <li>Programación</li>
+                    <li>Inteligencia Artificial</li>
+                    <li>Desarrollo Web</li>
+                    <li>Desarrollo de Aplicaciones Móviles</li>
+                    <li>Cultura Japonesa y Manga</li>
+                    <li>Videojuegos</li>
+                </ul>
+            </section>
+            
+            <section id="proyectos">
+                <h3>Mis Proyectos</h3>
+                <div class="proyectos-container">
+                    <article class="proyecto-card">
+                        <h4>Proyecto 1</h4>
+                        <p>Todavía estoy trabajando en este proyecto, pero ya tengo una idea clara de lo que quiero lograr.</p>
+                    </article>
+                    <article class="proyecto-card">
+                        <h4>Proyecto 2</h4>
+                        <p>Es mi segundo proyecto del primer curso.</p>
+                    </article>
+                    <article class="proyecto-card">
+                        <h4>Proyecto 3</h4>
+                        <p>Próximamente disponible.</p>
+                    </article>
+                    <article class="proyecto-card">
+                        <h4>Proyecto 4</h4>
+                        <p>Aún no disponible.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 - Farfan Arias Marco | Salta, Argentina</p>
+        </footer>
+    </div>
 </body>
 </html>
