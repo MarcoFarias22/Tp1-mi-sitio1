@@ -4,10 +4,12 @@
 **Carrera:** Analista de Sistemas y Desarrollo web 
 
 ##  Sitio en Vivo
+
 Puedes ver el proyecto desplegado aquí:  
 https://marcofarias22.github.io/Tp1-mi-sitio1/
 
 ##  Tecnologías y Requisitos Cumplidos
+
 - **HTML5 Semántico:** Uso de `header`, `aside`, `main`, `footer`, y `article`.
 - **CSS3 Moderno:** Implementación de variables, Flexbox y **CSS Grid (Grid Areas)**.
 - **Diseño Responsivo:** Adaptado para Mobile, Tablet y Desktop (3 breakpoints).
@@ -15,4 +17,5 @@ https://marcofarias22.github.io/Tp1-mi-sitio1/
 - **Formulario Validado:** Campos obligatorios con restricciones de longitud y formato.
 
 ## 📱 Capturas de Pantalla
+
 ![Vista Desktop](./images/image.png)
