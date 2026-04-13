@@ -1,15 +1,18 @@
-Trabajo Práctico Nº1
+# Mi Proyecto - Portafolio Personal (Trabajo Practico Integrador)
+### IES 6001 "Gral. M. Belgrano"
+**Estudiante:** Marco Farfán Arias  
+**Carrera:** Analista de Sistemas y Desarrollo web 
 
-Alumno: Marco Antonio Farfan Arias
-Fecha: 23/03/2026
+##  Sitio en Vivo
+Puedes ver el proyecto desplegado aquí:  
+https://marcofarias22.github.io/Tp1-mi-sitio1/
 
-"Descripción del sitio web"
-Este Sitio Web lo desarrolle como parte de una practica de programacion web. 
-EL objetivo era presentar una página informativa con estructura básica, incluyendo
-contenido organizado, imágenes y enlaces. Hice el diseño es simple, claro y no tan complicado a distintos dispositivos.
+##  Tecnologías y Requisitos Cumplidos
+- **HTML5 Semántico:** Uso de `header`, `aside`, `main`, `footer`, y `article`.
+- **CSS3 Moderno:** Implementación de variables, Flexbox y **CSS Grid (Grid Areas)**.
+- **Diseño Responsivo:** Adaptado para Mobile, Tablet y Desktop (3 breakpoints).
+- **Galería Dinámica:** Uso de `grid-template-columns: repeat(auto-fit, minmax(...))`.
+- **Formulario Validado:** Campos obligatorios con restricciones de longitud y formato.
 
-Las tecnologias usadas son HTML5 y CSS3
-
-Aprender a usar la terminal es importante porque te ofrece mayor control, rapidez y eficiencia que una interfaz gráfica. Permite automatizar procesos, usar herramientas de desarrollo, consume menos recursos y resuelve problemas avanzados que no siempre tienen solución gráfica.
-
-Ruta de instalacion de Git: /mingw64/bin/git
+## 📱 Capturas de Pantalla
+![Vista Desktop](./images/image.png)
